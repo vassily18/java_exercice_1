@@ -28,13 +28,17 @@ public class Launcher
 
 		while(!"quit".equals(input)) 
 		{
-			System.out.println("unknown command");
+			if("fibo".equals(input)) {
+				input = scanner.nextLine();
+				System.out.println(fibo(Integer.parseInt(input)));
+			}
+			else{
+				System.out.println("Unknown command");
+			}
 			input = scanner.nextLine();
 		}
 
-		System.out.println("Vous avez tapé : " + input);
-
-		System.out.print(fibo(10));
+		//System.out.print(fibo(10));
 
 	}
 }
